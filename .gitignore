@@ -1,0 +1,27 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Node.js (もし使っていれば)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json # プロジェクトによっては含める場合もある
+yarn.lock         # プロジェクトによっては含める場合もある
+
+# IDE settings (例: VSCode)
+.vscode/
+
+# APIキーなどの機密情報を含む可能性のあるファイル (もしあれば)
+# 例えば、.envファイルなどを使っている場合は必ず指定
+# .env 
+# config.json (もし機密情報を含んでいれば)
+
+# ビルド成果物 (もしあれば)
+dist/
+build/
+
+# その他一時ファイル
+*.tmp
+*.swp

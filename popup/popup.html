@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>AI対話サポーター設定</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 300px; /* ポップアップの幅 */
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"], input[type="password"] { /* APIキーはパスワード形式で表示も考慮 */
+            width: 95%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #status {
+            margin-top: 10px;
+            font-size: 13px;
+            color: green;
+        }
+        .api-key-display {
+            font-size: 12px;
+            color: #666;
+            margin-bottom:10px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <h3>APIキー設定</h3>
+    <p class="api-key-display">現在のキー (末尾5文字): <span id="currentApiKeyDisplay">未設定</span></p>
+
+    <label for="apiKey">Gemini APIキー:</label>
+    <input type="password" id="apiKeyInput" placeholder="ここにAPIキーを入力">
+
+    <button id="saveApiKeyButton">保存</button>
+    <div id="status"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

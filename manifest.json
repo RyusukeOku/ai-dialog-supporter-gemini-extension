@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "AI対話サポーター (Gemini拡張)",
+  "version": "0.1.1",
+  "description": "Geminiのプロンプト入力をサポートし、改善提案を行います。",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://gemini.google.com/*",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*"],
+      "js": ["content_scripts/main.js"],
+      "css": ["content_scripts/custom_styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "AI対話サポーター設定"
+  }
+}

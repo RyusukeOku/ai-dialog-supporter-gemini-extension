@@ -1,0 +1,79 @@
+/* 改善案表示コンテナ全体のスタイル */
+#aiSupporterSuggestionsContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 350px; /* 少し幅を広げる */
+  max-height: 500px; /* 最大高さを設定 */
+  overflow-y: auto; /* 内容が多い場合はスクロール */
+  background-color: #ffffff; /* 背景色 */
+  border: 1px solid #dadce0; /* Google風の境界線 */
+  border-radius: 8px; /* 角を丸くする */
+  padding: 16px;
+  z-index: 10001; /* 他の要素より手前に */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* 少し影をつける */
+  font-family: 'Google Sans', Roboto, Arial, sans-serif; /* Google風フォント */
+  font-size: 14px;
+  color: #202124; /* Google風テキストカラー */
+}
+
+/* コンテナ内のタイトル */
+#aiSupporterSuggestionsContainer h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 500; /* 少し太く */
+  color: #3c4043;
+}
+
+/* 改善案リストのスタイル */
+#aiSupporterSuggestionsContainer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 各改善案のアイテム */
+#aiSupporterSuggestionsContainer li {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e8eaed; /* 区切り線 */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 4px; /* リストアイテムも少し丸く */
+  margin-bottom: 4px; /* アイテム間の余白 */
+}
+
+#aiSupporterSuggestionsContainer li:last-child {
+  border-bottom: none; /* 最後のアイテムの区切り線は消す */
+}
+
+#aiSupporterSuggestionsContainer li:hover {
+  background-color: #f1f3f4; /* Google風ホバー色 */
+}
+
+/* 閉じるボタンのスタイル */
+#aiSupporterSuggestionsContainer .close-button { /* IDからクラスに変更 */
+  display: block; /* ブロック要素にして幅を調整しやすく */
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #e8eaed; /* 背景色を少し抑えめに */
+  color: #202124;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  text-align: center;
+  width: auto; /* 内容に合わせる */
+  float: right; /* 右寄せ */
+}
+
+#aiSupporterSuggestionsContainer .close-button:hover {
+  background-color: #dadce0;
+}
+
+/* ローディングメッセージ用のスタイル (後で使う) */
+.ai-supporter-loading {
+  padding: 10px;
+  text-align: center;
+  color: #5f6368;
+}
